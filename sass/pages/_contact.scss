@@ -1,0 +1,35 @@
+@use '../base/typography' as *;
+
+.hero {
+  position: relative; // create positioning context
+}
+
+.hero img {
+  width: 100%; // so it fills the section
+  opacity: 54%;
+  position: relative; // keeps it in the stacking order
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute; // takes it out of normal flow
+  top: 50%; // center vertically
+  left: 50%; // center horizontally
+  transform: translate(-50%, -50%); // adjust for true center
+  color: $text-color;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text h2 {
+      font-size: $heading-font-size;
+}
+
+.hero-text h3 {
+    color: $sub-heading;
+    font-size: $heading-font-size;
+}
+
+.hero-text p {
+    font-size: 40px;
+}
