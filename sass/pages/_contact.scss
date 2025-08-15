@@ -1,7 +1,12 @@
 @use '../base/typography' as *;
 
+body {
+  background-color: #797979;
+}
+
 .hero {
   position: relative; // create positioning context
+  margin-bottom: -4px;
 }
 
 .hero img {
@@ -12,10 +17,10 @@
 }
 
 .hero-text {
-  position: absolute; // takes it out of normal flow
-  top: 50%; // center vertically
-  left: 50%; // center horizontally
-  transform: translate(-50%, -50%); // adjust for true center
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
   color: $text-color;
   text-align: center;
   z-index: 2;

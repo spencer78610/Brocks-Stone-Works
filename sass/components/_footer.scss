@@ -1,0 +1,84 @@
+@use '../base/typography' as *;
+
+.main-footer {
+    background-color: $primary-color;
+    padding-bottom: 1rem;
+}
+
+.footer-categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+// ============= Footer Text =============
+
+.footer-column h4 {
+  margin-bottom: 0.5rem;
+  color: $sub-heading;
+  font-weight: bold;
+  font-size: $subheading-font-size;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.4rem;
+  color: $text-color;
+  font-size: $subheading-font-size;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+    transition: all .3s ease-in-out;
+    color: $sub-heading;
+}
+
+.footer-divider {
+    width: auto;
+    border: 2px solid $sub-heading;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+// ============= Logo =============
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  color: $sub-heading;
+  cursor: pointer;
+  font-size: $subheading-font-size;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo h2 {
+  width: 15ch; // makes both lines the same width
+  margin: 0;
+  text-align: center;
+}
+
+.footer-logo .brand-name {
+  display: block; // ensures it's treated as a separate line
+}
+
+
+.footer-logo:hover {
+  transition: all .3s ease-in-out;
+  color: $text-color;
+}
+
+.invisible-heading {
+  visibility: hidden; 
+  margin-bottom: 0.5rem;
+}
