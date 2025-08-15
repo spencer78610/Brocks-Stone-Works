@@ -1,19 +1,37 @@
+// .hidden {
+//     display: none;
+// }
 
-h2 {
-    font-family: 'Times New Roman', 'Segoe UI' ,Times, serif;
-}
-
-h3 {
-    font-family: 'Times New Roman', 'Segoe UI' ,Times, serif;
-}
-
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+// Color varibles defined here
 
 $primary-color: #424242;
 $text-color: #FFFFFF;
 $sub-heading: #FFC216;
 
+// Text varibles defined here
+
 $heading-font-size: 80px;
 $subheading-font-size: 40px;
+
+$sub-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$heading-font: 'Times New Roman', 'Segoe UI' ,Times, serif;
+
+h2 {
+    font-family: $heading-font;
+}
+
+h3 {
+    font-family: $heading-font;
+}
+
+h4 {
+    font-family: $sub-font;
+}
+
+p {
+    font-family: $sub-font;
+}
+
+li {
+    font-family: $sub-font;
+}
