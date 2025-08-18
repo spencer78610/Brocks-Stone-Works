@@ -15,6 +15,16 @@
 
 // ============= Footer Text =============
 
+.main-footer li a {
+  color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.main-footer li a:hover {
+  color: $sub-heading;
+}
+
 .footer-column h4 {
   margin-bottom: 0.5rem;
   color: $sub-heading;
@@ -63,13 +73,13 @@
 }
 
 .footer-logo h2 {
-  width: 15ch; // makes both lines the same width
+  width: 15ch; 
   margin: 0;
   text-align: center;
 }
 
 .footer-logo .brand-name {
-  display: block; // ensures it's treated as a separate line
+  display: block; 
 }
 
 

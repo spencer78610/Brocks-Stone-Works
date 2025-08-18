@@ -10,7 +10,7 @@
     <!-- ========== Main Nav ========== -->
   <header>
     <nav class="nav">
-      <div class="logo"><h6>BROCK'S</h6><p>Stone Works</p></div>
+      <div class="logo"><a href="index.html"><h6>BROCK'S</h6><p>Stone Works</p></a></div>
       <!-- ========== Hamburger ========== -->
       <div class="hamburger" id="hamburger">
         <span></span>
@@ -20,14 +20,48 @@
 
       <!-- ========== Nav Links ========== -->
       <div class="nav-links" id="navLinks">
-        <a href="#">About</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
+
+    <!-- ========== Hero ========== -->
+  <section class="hero">
+    <img src="images/hero-placeholder.jpg" alt="">
+
+    <div class="hero-text">
+      <h2>BROCK'S <br> Stone Works</h2>
+      <h3>Gallery</h3>
+    </div>
+  </section>
     <!-- ========== Gallery ========== -->
   
+  <div class="gallery-filter-dropdown">
+    <button class="gallery-filter-btn">Filter ▼</button>
+    <div class="gallery-filter-menu">
+      <button data-filter="all">All</button>
+      <button data-filter="block">Block</button>
+      <button data-filter="brick">Brick</button>
+      <button data-filter="flagstone">Flagstone</button>
+      <button data-filter="veneer">Veneer</button>
+      <button data-filter="wallstone">Wallstone</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="gallery-img">
+    <img data-set="block" src="images/block.jpg" alt="">
+    <img data-set="brick" src="images/brick.jpg" alt="">
+    <img data-set="flagstone" src="images/flagstone.jpg" alt="">
+    <img data-set="flagstone" src="images/flagstone.jpg" alt="">
+    <img data-set="flagstone" src="images/flagstone.jpg" alt="">
+    <img data-set="veneer" src="images/veneer.jpg" alt="">
+    <img data-set="wallstone" src="images/wallstone.jpg" alt="">
+  </div>
 
     <!-- ========== Footer ========== -->
 
@@ -37,10 +71,10 @@
     <div class="footer-column">
       <h4>COMPANY</h4>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Gallery</li>
-        <li>Contact</li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
