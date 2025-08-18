@@ -1,24 +1,37 @@
-p, h1, h2, h3 {
-    font-family: 'Open Sans', Arial, sans-serif;
-}
+// .hidden {
+//     display: none;
+// }
 
-p {
-    margin-bottom: 20px;
-}
+// Color varibles defined here
+
+$primary-color: #424242;
+$text-color: #FFFFFF;
+$sub-heading: #FFC216;
+
+// Text varibles defined here
+
+$heading-font-size: 80px;
+$subheading-font-size: 40px;
+
+$sub-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$heading-font: 'Times New Roman', 'Segoe UI' ,Times, serif;
 
 h2 {
-    margin-top: 20px;
-    font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-family: $heading-font;
 }
 
 h3 {
-    font-weight: 600;
-    font-size: 18px;
+    font-family: $heading-font;
+}
+
+h4 {
+    font-family: $sub-font;
 }
 
 p {
-    font-weight: 300;
-    font-size: 16px;
+    font-family: $sub-font;
+}
+
+li {
+    font-family: $sub-font;
 }
