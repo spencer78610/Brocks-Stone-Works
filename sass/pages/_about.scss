@@ -1,0 +1,144 @@
+@use '../base/typography' as *;
+
+//  ========== Story Section ========== 
+
+.story-con {
+    margin: 20px 65px;
+}
+
+.story-con h2 {
+    color: $sub-heading;
+    font-size: $heading-font-size;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.story-con p {
+   color: $text-color; 
+   font-size: $subheading-font-size;
+   font-weight: 100;
+   margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.doing {
+    display: flex;
+    align-items: center;
+}
+
+.doing img {
+    margin-right: 15px;
+    width: 50%;
+    // max-width: 500px;
+    height: auto;
+    // object-fit: cover;
+}
+
+// .doing-text {
+//     // flex: 1;
+// }
+
+.why h2 {
+    margin-top: 50px;
+}
+
+.story-line {
+    border: 2px solid #ffc216;
+}
+
+//  ========== Service Section ========== 
+
+.service-con {
+    margin: 20px 0px;
+}
+
+.service-con h2 {
+    color: $sub-heading;
+    font-size: $heading-font-size;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 65px;
+}
+
+.service-con p {
+   color: $text-color; 
+   font-size: $subheading-font-size;
+   font-weight: 100;
+   margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+}   
+
+.service-con ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-a,
+.service-b,
+.service-c {
+  display: flex;
+  align-items: center;
+//   margin-bottom: 3rem; // space between rows
+}
+
+// Make both img + ul share half width
+.service-a ul,
+.service-b ul,
+.service-c ul,
+.service-a img,
+.service-b img,
+.service-c img {
+  flex: 1;          // each takes up 50%
+  max-width: 50%;   // ensure half screen
+}
+
+.service-a ul li,
+.service-b ul li,
+.service-c ul li {
+    padding-left: 65px;
+}
+
+// Style images
+.service-con img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+// Alternate directions for zigzag
+.service-a {
+  flex-direction: row; 
+}
+
+.service-b {
+  flex-direction: row-reverse; 
+}
+
+.service-c {
+  flex-direction: row; 
+}
+
+.gal-button {
+    width: 288px;
+    height: 84px;
+    background-color: $sub-heading;
+    color: black;
+    font-size: $subheading-font-size;
+    font-weight: bold;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    
+}
+
+.gal-button:hover {
+    background-color: black;
+    color: $sub-heading;
+}
