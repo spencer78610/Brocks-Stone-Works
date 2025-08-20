@@ -1,0 +1,82 @@
+@use '../base/typography' as *;
+
+// Dropdown wrapper
+.gallery-filter-dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 20px 36px;
+}
+
+// Main button
+.gallery-filter-btn {
+  background-color: $sub-heading;
+  width: 288px;
+  height: 84px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: #000;
+    color: $sub-heading;
+  }
+}
+
+// Dropdown menu
+.gallery-filter-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 100%;
+  z-index: 10;
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+}
+
+// Show dropdown when active
+.gallery-filter-dropdown:hover .gallery-filter-menu {
+  display: block;
+}
+
+// Gallery grid
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+}
+
+// Images
+.gallery-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+// Hide images completely (so grid reflows & moves visible ones to top)
+.gallery-img img.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+}
+}
