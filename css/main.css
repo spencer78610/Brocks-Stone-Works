@@ -1,3 +1,9 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
+
+.hidden {
+    display: none
+}
+
 h2 {
     font-family: "Times New Roman", "Segoe UI", Times, serif
 }
@@ -95,6 +101,16 @@ li {
     margin-right: 65px
 }
 
+.main-footer li a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s
+}
+
+.main-footer li a:hover {
+    color: #ffc216
+}
+
 .footer-column h4 {
     margin-bottom: .5rem;
     color: #ffc216;
@@ -133,6 +149,7 @@ li {
     color: #ffc216;
     cursor: pointer;
     font-size: 40px;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
     text-align: center;
@@ -160,14 +177,164 @@ li {
     margin-bottom: .5rem
 }
 
-a {
+body {
+    margin: 0
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    background: #424242;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 15rem
+}
+
+.home-hero-text {
+    align-self: center;
+    text-align: center;
+    color: #fff;
+    margin: 10px
+}
+
+.home-hero-text h2 {
+    font-size: 80px
+}
+
+.home-hero-text h3 {
+    color: #ffc216;
+    font-size: 80px
+}
+
+.home-hero-text p {
+    font-size: 40px;
+    color: #fff
+}
+
+.section-text-p1 {
+    font-family: "Times New Roman", "Segoe UI", Times, serif;
+    font-size: 2rem;
+    margin: 0
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem
+}
+
+.btn-colour-1 {
+    border: #353535 .1rem solid;
+    background: #ffc216
+}
+
+.btn-colour-1:hover {
+    background: #fff;
+    color: #000
+}
+
+.gallery-text {
+    text-align: left
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.gallery-container>div {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+.gallery-img {
+    height: 100%;
+    width: 100%
+}
+
+#about {
+    background-color: #333
+}
+
+.nav {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-family: "Times New Roman", "Segoe UI", Times, serif
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #f5f5f5
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s
+}
+
+.nav-links a:hover {
+    color: #f39c12
+}
+
+@media(max-width: 768px) {
+    .hamburger {
+        display: flex
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 2rem
+    }
+
+    .nav-links.open {
+        display: flex
+    }
+}
+
+a {
+    cursor: pointer
 }
 
 body {
@@ -207,4 +374,208 @@ body {
 
 .hero-text p {
     font-size: 40px
+}
+
+.gallery-filter-dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px 36px
+}
+
+.gallery-filter-btn {
+    background-color: #ffc216;
+    width: 288px;
+    height: 84px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all .3s ease-in-out
+}
+
+.gallery-filter-btn:hover {
+    background-color: #000;
+    color: #ffc216
+}
+
+.gallery-filter-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    z-index: 10
+}
+
+.gallery-filter-menu button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer
+}
+
+.gallery-filter-menu button:hover {
+    background: #eee
+}
+
+.gallery-filter-dropdown:hover .gallery-filter-menu {
+    display: block
+}
+
+.gallery-img {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr))
+}
+
+.gallery-img img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: opacity .3s ease, transform .3s ease
+}
+
+.gallery-img img.hidden {
+    display: none
+}
+
+@media screen and (min-width: 768px) {
+    .gallery-img {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr))
+    }
+}
+
+.story-con {
+    margin: 20px 65px
+}
+
+.story-con h2 {
+    color: #ffc216;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px
+}
+
+.story-con p {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px
+}
+
+.doing {
+    display: flex;
+    align-items: center
+}
+
+.doing img {
+    margin-right: 15px;
+    width: 50%;
+    height: auto
+}
+
+.why h2 {
+    margin-top: 50px
+}
+
+.story-line {
+    border: 2px solid #ffc216
+}
+
+.service-con {
+    margin: 20px 0px
+}
+
+.service-con h2 {
+    color: #ffc216;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 65px
+}
+
+.service-con p {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px
+}
+
+.service-con ul {
+    list-style: none;
+    padding: 0
+}
+
+.service-a,
+.service-b,
+.service-c {
+    display: flex;
+    align-items: center
+}
+
+.service-a ul,
+.service-b ul,
+.service-c ul,
+.service-a img,
+.service-b img,
+.service-c img {
+    flex: 1;
+    max-width: 50%
+}
+
+.service-a ul li,
+.service-b ul li,
+.service-c ul li {
+    padding-left: 65px
+}
+
+.service-con img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    display: block
+}
+
+.service-a {
+    flex-direction: row
+}
+
+.service-b {
+    flex-direction: row-reverse
+}
+
+.service-c {
+    flex-direction: row
+}
+
+.gal-button {
+    width: 288px;
+    height: 84px;
+    background-color: #ffc216;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease-in-out
+}
+
+.gal-button:hover {
+    background-color: #000;
+    color: #ffc216
 }
