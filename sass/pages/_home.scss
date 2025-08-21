@@ -39,12 +39,6 @@ body {
     color: $text-color;
 }
 
-.section-text-p1 {
-    font-family: $heading-font;
-    font-size: 2rem;
-    margin: 0;
-}
-
 /* Button */
 
 .btn {
@@ -77,13 +71,13 @@ body {
     text-align: left;
 }
 
-.gallery-container {
+.grid-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.gallery-container>div {
+.grid-container>div {
     flex: 0 0 50%;
     display: flex;
     align-items: center;
@@ -97,8 +91,9 @@ body {
 
 
 /* About Section */
-#about {
-    background-color: #333;
+
+.about-text {
+    text-align: left;
 }
 
 
