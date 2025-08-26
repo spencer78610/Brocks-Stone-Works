@@ -1,80 +1,66 @@
 @use '../base/typography' as *;
-
-//  ========== Story Section ========== 
+// ========== Story Section ==========
 
 .story-con {
-    margin: 20px 65px;
+  margin: 20px 65px;
 }
 
 .story-con h2 {
-    color: $sub-heading;
-    font-size: $heading-font-size;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 20px;
+  color: $sub-heading;
+  font-size: $heading-font-size; // desktop default
+  margin-bottom: 20px;
 }
 
 .story-con p {
-   color: $text-color; 
-   font-size: $subheading-font-size;
-   font-weight: 100;
-   margin: 0;
-    padding: 0;
-    margin-bottom: 50px;
+  color: $text-color;
+  font-size: $subheading-font-size;
+  font-weight: 100;
+  margin-bottom: 50px;
 }
 
 .doing {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .doing img {
-    margin-right: 15px;
-    width: 50%;
-    // max-width: 500px;
-    height: auto;
-    // object-fit: cover;
+  margin-right: 15px;
+  width: 50%;
+  height: auto;
 }
 
-// .doing-text {
-//     // flex: 1;
-// }
-
 .why h2 {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .story-line {
-    border: 2px solid #ffc216;
+  border: 2px solid $sub-heading;
 }
 
-//  ========== Service Section ========== 
+// ========== Service Section ==========
 
 .service-con {
-    margin: 20px 0px;
+  margin: 20px 0;
 }
 
 .service-con h2 {
-    color: $sub-heading;
-    font-size: $heading-font-size;
-    margin: 0;
-    padding: 0;
-    margin-top: 50px;
-    margin-left: 65px;
+  color: $sub-heading;
+  font-size: $heading-font-size;
+  margin-top: 50px;
+  margin-left: 65px;
 }
 
 .service-con p {
-   color: $text-color; 
-   font-size: $subheading-font-size;
-   font-weight: 100;
-   margin: 0;
-    padding: 0;
-    margin-bottom: 50px;
-}   
+  color: $text-color;
+  font-size: $subheading-font-size;
+  font-weight: 100;
+  margin-bottom: 50px;
+}
 
 .service-con ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .service-a,
@@ -82,27 +68,24 @@
 .service-c {
   display: flex;
   align-items: center;
-//   margin-bottom: 3rem; // space between rows
 }
 
-// Make both img + ul share half width
 .service-a ul,
 .service-b ul,
 .service-c ul,
 .service-a img,
 .service-b img,
 .service-c img {
-  flex: 1;          // each takes up 50%
-  max-width: 50%;   // ensure half screen
+  flex: 1;
+  max-width: 50%;
 }
 
 .service-a ul li,
 .service-b ul li,
 .service-c ul li {
-    padding-left: 65px;
+  padding-left: 65px;
 }
 
-// Style images
 .service-con img {
   width: 100%;
   height: auto;
@@ -110,35 +93,133 @@
   display: block;
 }
 
-// Alternate directions for zigzag
 .service-a {
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .service-b {
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
 }
 
 .service-c {
-  flex-direction: row; 
+  flex-direction: row;
 }
 
 .gal-button {
-    width: 288px;
-    height: 84px;
-    background-color: $sub-heading;
-    color: black;
-    font-size: $subheading-font-size;
-    font-weight: bold;
-    margin-top: 65px;
-    margin-bottom: 65px;
-    border: none;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    
+  display: block;
+  margin: 65px auto;
+  width: 18rem; // ~288px
+  height: 5rem; // ~84px
+  background-color: $sub-heading;
+  color: black;
+  font-size: $subheading-font-size;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
 }
 
 .gal-button:hover {
-    background-color: black;
-    color: $sub-heading;
+  background-color: black;
+  color: $sub-heading;
+}
+
+.service-con a {
+  text-decoration: none;
+}
+
+// ========== Media Queries ==========
+
+// Laptop ≤ 1200px
+@media (max-width: 1200px) {
+  .story-con {
+    margin: 20px 2rem;
+  }
+
+  .story-con h2 {
+    font-size: 3.5rem;
+  }
+
+  .story-con p {
+    font-size: 2rem;
+  }
+
+  .service-con h2 {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .service-con p {
+    font-size: 2rem;
+  }
+
+  .service-a ul li,
+  .service-b ul li,
+  .service-c ul li {
+    padding-left: 2rem;
+  }
+}
+
+// Tablet / Mobile ≤ 768px
+@media (max-width: 768px) {
+  .story-con {
+    margin: 20px 1rem;
+    text-align: center;
+  }
+
+  .story-con h2 {
+    font-size: 2.5rem;
+  }
+
+  .story-con p {
+    font-size: 2rem;
+  }
+
+  .doing {
+    flex-direction: column;
+  }
+
+  .doing img {
+    display: none; // hide story image on mobile
+  }
+
+  .service-con h2 {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .service-con p {
+    font-size: 2rem;
+  }
+
+  .service-a,
+  .service-b,
+  .service-c {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-a ul,
+  .service-b ul,
+  .service-c ul,
+  .service-a img,
+  .service-b img,
+  .service-c img {
+    max-width: 100%;
+  }
+
+  .service-a ul li,
+  .service-b ul li,
+  .service-c ul li {
+    padding-left: 0;
+  }
+
+  .gal-button {
+    width: 100%;
+    max-width: 16rem;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 1rem;
+  }
 }

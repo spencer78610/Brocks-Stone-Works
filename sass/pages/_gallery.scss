@@ -1,18 +1,17 @@
 @use '../base/typography' as *;
 
-// Dropdown wrapper
+// ============= Filter Button =============
 .gallery-filter-dropdown {
   position: relative;
   display: inline-block;
   margin: 20px 36px;
 }
 
-// Main button
 .gallery-filter-btn {
   background-color: $sub-heading;
-  width: 288px;
-  height: 84px;
-  font-size: 40px;
+  width: 18rem; // ~288px
+  height: 5rem; // ~80px
+  font-size: 2.5rem; // ~40px
   font-weight: bold;
   cursor: pointer;
   border: none;
@@ -24,7 +23,6 @@
   }
 }
 
-// Dropdown menu
 .gallery-filter-menu {
   display: none;
   position: absolute;
@@ -38,7 +36,7 @@
   button {
     width: 100%;
     padding: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: left;
     background: none;
     border: none;
@@ -50,33 +48,64 @@
   }
 }
 
-// Show dropdown when active
 .gallery-filter-dropdown:hover .gallery-filter-menu {
   display: block;
 }
 
-// Gallery grid
+// ============= Gallery Grid =============
 .gallery-img {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-// Images
 .gallery-img img {
   width: 100%;
   height: auto;
   object-fit: cover;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-// Hide images completely (so grid reflows & moves visible ones to top)
+.gallery-img img:hover {
+  opacity: 0.5;
+}
+
 .gallery-img img.hidden {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+// ============= Media Queries =============
+
+// Laptop ≤ 1200px
+@media (max-width: 1200px) {
+  .gallery-filter-btn {
+    width: 14rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+
   .gallery-img {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 }
+
+// Tablet / Mobile ≤ 768px
+@media (max-width: 768px) {
+  .gallery-filter-dropdown {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+
+  .gallery-filter-btn {
+    width: 100%;
+    max-width: 18rem;
+    height: auto;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .gallery-img {
+    grid-template-columns: 1fr; // single column stack
+  }
 }
