@@ -5,12 +5,19 @@ body {
 }
 
 .hero {
-  position: relative; // create positioning context
-  margin-bottom: -4px;
+  position: relative;
+  min-height: 100vh; // ensures enough height
+  margin-bottom: 0;  // remove the negative margin
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .hero img {
   width: 100%; // so it fills the section
+  height: 100vh;
   opacity: 54%;
   position: relative; // keeps it in the stacking order
   z-index: 1;
@@ -28,13 +35,70 @@ body {
 
 .hero-text h2 {
       font-size: $heading-font-size;
+      margin: 0;
 }
 
 .hero-text h3 {
     color: $sub-heading;
     font-size: $heading-font-size;
+    margin: 0;
+    margin-top: 25px;
 }
 
 .hero-text p {
-    font-size: 40px;
+      font-size: 1.5rem; // ~24px
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px; // scale down everything slightly
+  }
+
+  .hero-text h2 {
+    font-size: 4.5rem; // ~56px
+  }
+
+  .hero-text h3 {
+    font-size: 3.5rem; // ~32px
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; // ~20px
+  }
+}
+
+/* Tablet / Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-text {
+    width: 90%;
+  }
+
+  .hero-text h2 {
+    font-size: 3.5rem; // ~40px
+  }
+
+  .hero-text h3 {
+    font-size: 3rem; // ~24px
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; // ~16px
+  }
+
+  /* Footer columns stack */
+  .footer-categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

@@ -1,0 +1,108 @@
+@use '../base/typography' as *;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.nav {
+  background: rgba(0, 0, 0, 0.54);
+    color: $text-color;
+    padding: 13px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// ========== Logo ==========
+
+.header-logo {
+    color: $text-color;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.header-logo h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 23px;
+}
+
+.header-logo .brand-name {
+  display: block; 
+  font-size: 28px;
+}
+
+.header-logo a {
+  text-decoration: none;   
+  color: inherit;          
+  display: inline-block;   
+}
+
+.header-logo a:hover {
+  transition: all .3s ease-in-out;
+  color: $sub-heading;
+}
+
+// ========== links ==========
+
+.nav-links {
+  display: flex;
+  gap: 45px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: $subheading-font-size;
+  font-weight: 100;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+// ========== Hamburger ==========
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+// ========== Mobile View 768px ==========
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 2rem;
+        // height: calc(100vw - 60px);      changes the height
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}

@@ -11,6 +11,7 @@
   gap: 2rem;
   margin-left: 65px;
   margin-right: 65px;
+  margin-bottom: 20px;
 }
 
 // ============= Footer Text =============
@@ -29,7 +30,7 @@
   margin-bottom: 0.5rem;
   color: $sub-heading;
   font-weight: bold;
-  font-size: $subheading-font-size;
+  font-size: 2rem;
 }
 
 .footer-column ul {
@@ -41,7 +42,8 @@
 .footer-column li {
   margin-bottom: 0.4rem;
   color: $text-color;
-  font-size: $subheading-font-size;
+  font-size: 2rem;
+  font-weight: 100;
   cursor: pointer;
 }
 
@@ -82,8 +84,13 @@
   display: block; 
 }
 
+.footer-logo a {
+  text-decoration: none;   
+  color: inherit;          
+  display: inline-block;   
+}
 
-.footer-logo:hover {
+.footer-logo a:hover {
   transition: all .3s ease-in-out;
   color: $text-color;
 }
@@ -91,4 +98,45 @@
 .invisible-heading {
   visibility: hidden; 
   margin-bottom: 0.5rem;
+}
+
+/* Laptop (≤ 1200px): go from 4 → 2 columns */
+@media (max-width: 1200px) {
+  .footer-categories {
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .footer-column h4 {
+    font-size: 2rem;
+  }
+
+  .footer-column li {
+    font-size: 2rem;
+  }
+}
+
+/* Tablet / Mobile (≤ 768px): stack columns vertically */
+@media (max-width: 768px) {
+  .footer-categories {
+    grid-template-columns: 1fr;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .footer-column {
+    margin-bottom: 1rem;
+  }
+
+  .footer-divider {
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
