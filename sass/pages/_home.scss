@@ -34,12 +34,44 @@ body {
     font-size: $heading-font-size;
 }
 
-.home-hero-text p {
+.hero-text p a {
+    color: $text-color;
+    transition: all .3s ease-in-out;
+}
+
+.hero-text p a:hover {
+    color: $sub-heading;
+    text-decoration: solid;
+}
+
+.hero-text p a {
     font-size: 40px;
     color: $text-color;
 }
 
 /* Button */
+
+.con-button {
+  display: block;
+  width: 18rem; // ~288px
+  height: 5rem; // ~84px
+  background-color: $sub-heading;
+  color: black;
+  font-size: $subheading-font-size;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.con-button:hover {
+  background-color: black;
+  color: $sub-heading;
+}
+
+.btn-container a {
+    text-decoration: none;
+}
 
 .btn {
     cursor: pointer;
@@ -52,7 +84,6 @@ body {
 .btn-container {
     display: flex;
     justify-content: center;
-    margin: 2rem;
 }
 
 .btn-colour-1 {
@@ -66,6 +97,14 @@ body {
 }
 
 /* Gallery section */
+
+.home-service h2 {
+    margin-left: 0px;
+}
+
+.home-service p {
+    margin-left: 65px;
+}
 
 .gallery-text {
     text-align: left;
@@ -84,32 +123,35 @@ body {
     justify-content: flex-start;
 }
 
-.gallery-img {
-    height: 100%;
-    width: 100%;
-}
-
-
 /* About Section */
 
 .about-text {
     text-align: left;
 }
 
-
-
-.nav {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.about-text h2 {
+    color: $sub-heading;
+    font-size: 5rem;
+    margin-top: 50px;
+    margin-left: 65px;
 }
 
-.logo {
-    font-size: 1.2rem;
-    font-family: $heading-font;
+.about-text p {
+    color: $text-color;
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-right: 50px;
+    margin-left: 65px;
+}
+
+.about-text img {
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-text a {
+    text-decoration: none;
 }
 
 .hamburger {
@@ -165,4 +207,72 @@ body {
 
 a {
     cursor: pointer;
+}
+
+
+/* Laptop (≤1200px) */
+@media (max-width: 1200px) {
+  .about-text h2 {
+    font-size: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .about-text img {
+    height: 40rem;
+  }
+
+  .grid-container > div {
+    flex: 0 0 100%; // full width, but still stacked neatly
+    justify-content: center;
+  }
+}
+
+/* Tablet / Mobile (≤768px) */
+@media (max-width: 768px) {
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .about-text p {
+    font-size: 2rem;
+    margin: 0 1rem 2rem;
+  }
+
+  .about-text img {
+    display: none;
+  }
+
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .grid-container > div {
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+
+  .about-text img {
+    height: auto;
+    max-height: 20rem;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .gal-button {
+    width: 100%;
+    max-width: 16rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 }

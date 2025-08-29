@@ -56,11 +56,13 @@
 .gallery-img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  background-color: #000;
 }
 
 .gallery-img img {
   width: 100%;
-  height: auto;
+  // height: auto;
+  height: 500px;
   object-fit: cover;
   transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;

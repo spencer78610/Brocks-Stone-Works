@@ -10,104 +10,93 @@
 
 <body>
 
-  <!-- Navigation -->
+<!-- ========== Main Nav ========== -->
 
-  <nav class="nav">
-    <div class="logo">
-      <p>BROCK'S</p>
-      <p>Stone Works</p>
-    </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+    <div class="header-logo">
+      <a href="index.html">
+        <h2>
+          <span class="brand-name">BROCK'S</span>
+          Stone Works
+        </h2>
+      </a>
+    </div>       
+     <!-- ========== Hamburger ========== -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- ========== Nav Links ========== -->
+      <div class="nav-links" id="navLinks">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
   <!-- home Section -->
 
-  <section id="home">
-    <div class="home-hero-text">
-      <h2>BROCK'S <br> Stone Works</h2>
+    <section class="hero">
+    <img src="images/last-day.PNG" alt="">
+
+    <div class="hero-text">
+      <h2>
+          <span class="brand-name-hero">BROCK'S</span>
+          Stone Works
+        </h2>
+      <!-- <h2>BROCK'S <br> Stone Works</h2> -->
       <div class="btn-container">
-        <button class="btn btn-colour-1">Contact Us</button>
+        <a href="contact.html"><button class="con-button">CONTACT US</button></a>
       </div>
-      <p>519-936-6085</p>
+        <p>
+          <a href="tel:5199396085">519-939-6085</a>
+        </p>
     </div>
   </section>
 
-  <!-- Gallery section -->
-  <section id="gallery">
-    <div class="home-hero-text gallery-text">
-      <h3>All Your Masonry Needs</h3>
-      <p>Trusted craftsmanship, whether it's restoration, repair, or new construction</p>
-      <div class="grid-container">
-        <div>
-          <ul>
-            <li>
-              <p>Wall Stone</p>
-            </li>
-            <li>
-              <p>Brick and block work</p>
-            </li>
-            <li>
-              <p>Stone Veneer</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <img src="./assets/Wood_Burning_Fireplaces.jpg" class="gallery-img">
-        </div>
-        <div>
-          <img src="./assets/Wood_Burning_Fireplaces.jpg" class="gallery-img">
-        </div>
-        <div>
-          <ul>
-            <li>
-              <p>Custom Wood Burning Fire Places</p>
-            </li>
-            <li>
-              <p>Chimneys</p>
-            </li>
-            <li>
-              <p>Pool Surrounds</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <p>Stone Patios</p>
-            </li>
-            <li>
-              <p>Stone Floors</p>
-            </li>
-            <li>
-              <p>Flagstone Walkways</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <img src="./assets/Wood_Burning_Fireplaces.jpg" class="gallery-img">
-        </div>
-      </div>
-      <div class="btn-container">
-        <a href="gallery.html"><button class="btn btn-colour-1">Gallery</button></a>
-      </div>
+    <!-- ========== Services Section ========== -->
+
+  <section class="service-con home-service">
+    <h2>All Your Masonry Needs</h2>
+    <p>Trusted craftsmanship, whether it's restoration, repair, or new construction</p>
+    <div class="service-a">
+        <ul>
+            <li><p>Wall Stone</p></li>
+            <li><p>Brick and Block Work</p></li>
+            <li><p>Stone Veneer</p></li>
+        </ul>
+        <img src="images/range-rover.JPG" alt="house with car">
     </div>
 
+    <div class="service-b">
+        <ul>
+            <li><p>Custom Wood Burning Fire Places</p></li>
+            <li><p>Chimneys</p></li>
+            <li><p>Pool Surrounds</p></li>
+        </ul>
+       <img src="images/fireplace4.JPG" alt="fireplace">
+    </div>
+
+    <div class="service-c">
+        <ul>
+            <li><p>Stone Patios</p></li>
+            <li><p>Stone Floors</p></li>
+            <li><p>Flagstone Walkways</p></li>
+        </ul>
+        <img src="images/flagstone2.jpg" alt="flagstone">
+    </div>
+
+    <a href="gallery.html"><button class="gal-button">GALLERY</button></a>
   </section>
 
   <!-- about section -->
 
   <section id="about">
     <div class="home-hero-text about-text">
-      <h3>About Us</h3>
+      <h2>About Us</h2>
       <div class="grid-container">
         <div>
           <p>Brocks Stone Works takes pride in turning stone into
@@ -123,13 +112,11 @@
             excellence.</p>
         </div>
         <div>
-          <img src="./assets/Wood_Burning_Fireplaces.jpg" class="gallery-img">
+          <img src="images/red-door.jpg" class="gallery-img">
         </div>
       </div>
 
-      <div class="btn-container">
-        <a href="about.html"><button class="btn btn-colour-1">More</button></a>
-      </div>
+    <a href="about.html"><button class="gal-button">MORE</button></a>
     </div>
   </section>
 
@@ -138,15 +125,15 @@
   <footer class="main-footer">
     <div class="footer-categories">
       <!-- Column 1 -->
-      <div class="footer-column">
-        <h4>COMPANY</h4>
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Gallery</li>
-          <li>Contact</li>
-        </ul>
-      </div>
+    <div class="footer-column">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
 
       <!-- Column 2 -->
       <div class="footer-column">
@@ -160,38 +147,41 @@
       </div>
 
       <!-- Column 3 (no title) -->
-      <div class="footer-column">
-        <h4 class="invisible-heading">.</h4> <!-- visually hidden -->
-        <ul>
-          <li>Chimneys</li>
-          <li>Pool Surrounds</li>
-          <li>Stone Patios</li>
-          <li>Stone Floors</li>
-        </ul>
-      </div>
+    <div class="footer-column">
+      <h4 class="invisible-heading">.</h4>
+      <ul>
+        <li>Chimneys</li>
+        <li>Pool Surrounds</li>
+        <li>Stone Patios</li>
+        <li>Stone Floors</li>
+        <li>Stone Walls</li>
+      </ul>
+    </div>
 
       <!-- Column 4 -->
-      <div class="footer-column">
-        <h4>CONTACT</h4>
-        <ul>
-          <li>Office - (519) 939-6085</li>
-          <li>Fax - 519-855-4194</li>
-          <li>brockstoneworks@gmail.com</li>
-          <li>Hillsburgh, Ontario</li>
-        </ul>
-      </div>
+    <div class="footer-column">
+      <h4>CONTACT</h4>
+      <ul>
+        <li><a href="tel:5199396085">Office - (519) 939-6085</a></li>
+        <li>Fax - 519-855-4194</li>
+        <li><a href="mailto:brockstoneworks@gmail.com">brockstoneworks@gmail.com</a></li>
+        <li>Hillsburgh, Ontario</li>
+      </ul>
+    </div>
 
 
     </div>
     <hr class="footer-divider">
 
     <!-- Column 5 (Logo) -->
-    <div class="footer-logo">
+  <div class="footer-logo">
+    <a href="index.html">
       <h2>
         <span class="brand-name">BROCK'S</span>
         Stone Works
       </h2>
-    </div>
+    </a>
+  </div>
 
 
   </footer>
