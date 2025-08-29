@@ -88,7 +88,7 @@
 
 .service-con img {
   width: 100%;
-  height: auto;
+  height: 33.75rem;
   object-fit: cover;
   display: block;
 }
@@ -151,6 +151,8 @@
 
   .service-con p {
     font-size: 2rem;
+        margin-left: 0;
+
   }
 
   .service-a ul li,
@@ -173,6 +175,7 @@
 
   .story-con p {
     font-size: 2rem;
+    margin-left: 0;
   }
 
   .doing {
