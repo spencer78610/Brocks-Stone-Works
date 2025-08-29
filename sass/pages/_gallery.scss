@@ -76,6 +76,33 @@
   display: none;
 }
 
+/* Hide extra images by default */
+.gallery-img img.hidden-initial {
+  display: none;
+}
+
+/* Button styling */
+.view-more-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.view-more-btn {
+  background-color: $sub-heading;
+  color: #000;
+  font-size: 2rem;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+  background-color: #000;
+  color: $sub-heading;
+}
+
+
 // ============= Media Queries =============
 
 // Laptop ≤ 1200px
