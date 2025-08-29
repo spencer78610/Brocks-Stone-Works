@@ -1,29 +1,19 @@
-//  ========== dropdown menu ==========
-
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButtons = document.querySelectorAll(".gallery-filter-menu button");
   const images = document.querySelectorAll(".gallery-img img");
 
-  // Filter logic
+  /* ========== Dropdown Menu ========== */
+  const menuButtons = document.querySelectorAll(".gallery-filter-menu button");
+
   menuButtons.forEach(button => {
     button.addEventListener("click", () => {
       const filter = button.dataset.filter;
-
       images.forEach(img => {
-        if (filter === "all" || img.dataset.set === filter) {
-          img.classList.remove("hidden");
-        } else {
-          img.classList.add("hidden");
-        }
+        img.classList.toggle("hidden", filter !== "all" && img.dataset.set !== filter);
       });
     });
   });
-});
 
-//  ========== lightbox controls ==========
-
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".gallery-img img");
+  /* ========== Lightbox Controls ========== */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.querySelector(".lightbox-close");
@@ -32,56 +22,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
 
-  // Open Lightbox
+  const updateLightbox = () => {
+    lightboxImg.src = images[currentIndex].src;
+    lightboxImg.alt = images[currentIndex].alt;
+  };
+
   function openLightbox(index) {
     currentIndex = index;
     lightbox.style.display = "flex";
-    lightboxImg.src = images[currentIndex].src;
-    lightbox.alt = images[currentIndex].alt;
+    updateLightbox();
   }
 
-  // close lightbox
   function closeLightbox() {
-    lightbox.style = "none";
+    lightbox.style.display = "none"; // fixed (was lightbox.style = "none")
   }
 
-  // Show previous image
-  function showPrev() {
+  const showPrev = () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
-    lightboxImg.src = images[currentIndex].src;
-    lightboxImg.alt = images[currentIndex].alt;
-  }
+    updateLightbox();
+  };
 
-  // Show next image
-  function showNext() {
+  const showNext = () => {
     currentIndex = (currentIndex + 1) % images.length;
-    lightboxImg.src = images[currentIndex].src;
-    lightboxImg.alt = images[currentIndex].alt;
-  }
+    updateLightbox();
+  };
 
-  // add click event to all images
   images.forEach((img, index) => {
     img.addEventListener("click", () => openLightbox(index));
   });
 
-  // Event listeners
   closeBtn.addEventListener("click", closeLightbox);
   prevBtn.addEventListener("click", showPrev);
   nextBtn.addEventListener("click", showNext);
 
-  // close when clicking outside
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) closeLightbox();
   });
 
-  // Keyboard navigation
-  document.addEventListener("keydown", (e) => {
-    if (lightbox.style.display = "flex") {
+  document.addEventListener("keydown", e => {
+    if (lightbox.style.display === "flex") { // fixed (was using "=")
       if (e.key === "ArrowLeft") showPrev();
       if (e.key === "ArrowRight") showNext();
       if (e.key === "Escape") closeLightbox();
     }
   });
+
+  /* ========== View More / View Less ========== */
+  const viewMoreBtn = document.getElementById("viewMoreBtn");
+  if (viewMoreBtn) {
+    const initialVisible = 12;
+    images.forEach((img, index) => {
+      if (index >= initialVisible) img.classList.add("hidden-initial");
+    });
+
+    let expanded = false;
+    viewMoreBtn.addEventListener("click", () => {
+      expanded = !expanded;
+      images.forEach((img, index) => {
+        if (index >= initialVisible) {
+          img.classList.toggle("hidden-initial", !expanded);
+        }
+      });
+      viewMoreBtn.textContent = expanded ? "View Less" : "View More";
+    });
+  }
 });
