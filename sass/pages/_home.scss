@@ -53,15 +53,16 @@ body {
 
 .con-button {
   display: block;
-  width: 18rem; // ~288px
-  height: 5rem; // ~84px
+  width: 11rem;
+  height: 3rem; 
   background-color: $sub-heading;
   color: black;
-  font-size: $subheading-font-size;
+  font-size: 1.5rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
   transition: all .3s ease-in-out;
+  margin-bottom: 1rem;
 }
 
 .con-button:hover {

@@ -10,7 +10,7 @@ header {
 .nav {
   background: rgba(0, 0, 0, 0.54);
     color: $text-color;
-    padding: 13px 20px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,12 +28,12 @@ header {
 .header-logo h2 {
   margin: 0;
   text-align: center;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .header-logo .brand-name {
   display: block; 
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .header-logo a {
@@ -58,7 +58,7 @@ header {
   color: white;
   text-decoration: none;
   transition: 0.3s;
-  font-size: $subheading-font-size;
+  font-size: 1.5rem;
   font-weight: 100;
 }
 
