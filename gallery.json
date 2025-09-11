@@ -276,6 +276,12 @@
     "alt": "wallstone - wallstone28"
   },
   {
+    "slug": "wallstone-wrailing.jpg",
+    "set":"wallstone",
+    "src": "images/wallstone/wallstone-wrailing.jpg",
+    "alt": "wallstone - wallstone-railing"
+  },
+  {
     "slug": "wallstone29",
     "set": "wallstone",
     "src": "images/wallstone/wallstone29.jpg",
@@ -443,18 +449,38 @@
     "src": "images/wallstone/wallstone9.jpg",
     "alt": "wallstone - wallstone9"
   },
-  {
-    "slug": "firebrick",
+
+    {
+    "slug": "fireplace17",
     "set": "fireplace",
-    "src": "images/fireplaces/firebrick.jpg",
-    "alt": "fireplace - firebrick"
+    "src": "images/fireplaces/fireplace17.jpg",
+    "alt": "fireplace - fireplace17"
   },
   {
-    "slug": "firebrick2",
+    "slug": "fireplace15",
     "set": "fireplace",
-    "src": "images/fireplaces/firebrick2.jpg",
-    "alt": "fireplace - firebrick2"
+    "src": "images/fireplaces/fireplace15.jpg",
+    "alt": "fireplace - fireplace15"
   },
+  {
+    "slug": "fireplace6",
+    "set": "fireplace",
+    "src": "images/fireplaces/fireplace6.JPG",
+    "alt": "fireplace - fireplace6"
+  },
+  {
+    "slug": "fireplace19",
+    "set": "fireplace",
+    "src": "images/fireplaces/fireplace19.jpg",
+    "alt": "fireplace - fireplace19"
+  },
+  {
+    "slug": "fireplace8",
+    "set": "fireplace",
+    "src": "images/fireplaces/fireplace8.jpg",
+    "alt": "fireplace - fireplace8"
+  },
+
   {
     "slug": "fireplace&pillars",
     "set": "fireplace",
@@ -468,22 +494,10 @@
     "alt": "fireplace - fireplace"
   },
   {
-    "slug": "fireplace10",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace10.jpg",
-    "alt": "fireplace - fireplace10"
-  },
-  {
     "slug": "fireplace11",
     "set": "fireplace",
     "src": "images/fireplaces/fireplace11.jpg",
     "alt": "fireplace - fireplace11"
-  },
-  {
-    "slug": "fireplace12",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace12.jpg",
-    "alt": "fireplace - fireplace12"
   },
   {
     "slug": "fireplace13",
@@ -497,11 +511,12 @@
     "src": "images/fireplaces/fireplace14.jpg",
     "alt": "fireplace - fireplace14"
   },
+  
   {
-    "slug": "fireplace15",
+    "slug": "firebrick2",
     "set": "fireplace",
-    "src": "images/fireplaces/fireplace15.jpg",
-    "alt": "fireplace - fireplace15"
+    "src": "images/fireplaces/firebrick2.jpg",
+    "alt": "fireplace - firebrick2"
   },
   {
     "slug": "fireplace16",
@@ -510,10 +525,10 @@
     "alt": "fireplace - fireplace16"
   },
   {
-    "slug": "fireplace17",
+    "slug": "firebrick",
     "set": "fireplace",
-    "src": "images/fireplaces/fireplace17.jpg",
-    "alt": "fireplace - fireplace17"
+    "src": "images/fireplaces/firebrick.jpg",
+    "alt": "fireplace - firebrick"
   },
   {
     "slug": "fireplace18",
@@ -521,12 +536,7 @@
     "src": "images/fireplaces/fireplace18.jpg",
     "alt": "fireplace - fireplace18"
   },
-  {
-    "slug": "fireplace19",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace19.jpg",
-    "alt": "fireplace - fireplace19"
-  },
+
   {
     "slug": "fireplace4",
     "set": "fireplace",
@@ -539,24 +549,8 @@
     "src": "images/fireplaces/fireplace5.JPG",
     "alt": "fireplace - fireplace5"
   },
-  {
-    "slug": "fireplace6",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace6.JPG",
-    "alt": "fireplace - fireplace6"
-  },
-  {
-    "slug": "fireplace7",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace7.JPG",
-    "alt": "fireplace - fireplace7"
-  },
-  {
-    "slug": "fireplace8",
-    "set": "fireplace",
-    "src": "images/fireplaces/fireplace8.jpg",
-    "alt": "fireplace - fireplace8"
-  },
+
+
   {
     "slug": "fireplace9",
     "set": "fireplace",
@@ -568,6 +562,12 @@
     "set": "fireplace",
     "src": "images/fireplaces/outdoor-fireplace.jpg",
     "alt": "fireplace - outdoor-fireplace"
+  },
+    {
+    "slug": "fireplace10",
+    "set": "fireplace",
+    "src": "images/fireplaces/fireplace10.jpg",
+    "alt": "fireplace - fireplace10"
   },
   {
     "slug": "chimney6",
@@ -695,12 +695,7 @@
     "src": "images/flagstones/flagstone2.jpg",
     "alt": "flagstone - flagstone2"
   },
-  {
-    "slug": "flagstone3",
-    "set": "flagstone",
-    "src": "images/flagstones/flagstone3.jpg",
-    "alt": "flagstone - flagstone3"
-  },
+
   {
     "slug": "flagstone4",
     "set": "flagstone",
@@ -754,5 +749,11 @@
     "set": "flagstone",
     "src": "images/flagstones/steps5.JPG",
     "alt": "flagstone - steps5"
+  },
+  {
+    "slug": "flagstone3",
+    "set": "flagstone",
+    "src": "images/flagstones/flagstone3.jpg",
+    "alt": "flagstone - flagstone3"
   }
 ]
