@@ -84,7 +84,6 @@
 /* Button styling */
 .view-more-container {
   text-align: center;
-  margin: 20px 0;
 }
 
 .view-more-btn {
@@ -92,6 +91,7 @@
   color: #000;
   font-size: 2rem;
   padding: 10px 20px;
+  margin: 20px 0;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
