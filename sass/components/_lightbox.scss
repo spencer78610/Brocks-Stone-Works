@@ -63,3 +63,11 @@
 .lightbox-next {
   right: 30px;
 }
+
+@media (max-width: 768px) {
+  .lightbox-prev:hover,
+.lightbox-next:hover {
+  color: white;
+}
+}
+

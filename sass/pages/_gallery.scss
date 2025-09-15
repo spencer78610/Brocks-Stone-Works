@@ -1,21 +1,25 @@
 @use '../base/typography' as *;
 
 // ============= Filter Button =============
+@use '../base/typography' as *;
+
+// ================= Filter Button =================
 .gallery-filter-dropdown {
   position: relative;
-  display: inline-block;
-  margin: 20px 36px;
+  display: inline-block; 
+  margin: 20px 30px;     
+  text-align: center;    
 }
 
 .gallery-filter-btn {
   background-color: $sub-heading;
-  width: 18rem; // ~288px
-  height: 5rem; // ~80px
-  font-size: 2.5rem; // ~40px
+  width: 18rem; 
+  height: 5rem; 
+  font-size: 2.5rem; 
   font-weight: bold;
   cursor: pointer;
   border: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: #000;
@@ -24,14 +28,17 @@
 }
 
 .gallery-filter-menu {
-  display: none;
+  display: none;         // hidden by default
   position: absolute;
   top: 100%;
   left: 0;
+  width: 100%;           // match button width
   background: #fff;
   border: 1px solid #ccc;
-  width: 100%;
   z-index: 10;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
 
   button {
     width: 100%;
@@ -48,11 +55,21 @@
   }
 }
 
-.gallery-filter-dropdown:hover .gallery-filter-menu {
-  display: block;
+// Desktop hover only
+@media (hover: hover) and (pointer: fine) {
+  .gallery-filter-dropdown:hover .gallery-filter-menu {
+    display: block;
+    max-height: 500px; // large enough for all buttons
+  }
 }
 
-// ============= Gallery Grid =============
+// JS toggle class for mobile
+.gallery-filter-menu.show {
+  display: block;
+  max-height: 500px; // same as above for animation
+}
+
+// ================= Gallery Grid =================
 .gallery-img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -61,27 +78,22 @@
 
 .gallery-img img {
   width: 100%;
-  // height: auto;
   height: 500px;
   object-fit: cover;
   transition: opacity 0.3s ease, transform 0.3s ease;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &.hidden,
+  &.hidden-initial {
+    display: none;
+  }
 }
 
-.gallery-img img:hover {
-  opacity: 0.5;
-}
-
-.gallery-img img.hidden {
-  display: none;
-}
-
-/* Hide extra images by default */
-.gallery-img img.hidden-initial {
-  display: none;
-}
-
-/* Button styling */
+// ================= View More Button =================
 .view-more-container {
   text-align: center;
 }
@@ -95,15 +107,14 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #000;
+    color: $sub-heading;
+  }
 }
 
-.view-more-btn:hover {
-  background-color: #000;
-  color: $sub-heading;
-}
-
-
-// ============= Media Queries =============
+// ================= Media Queries =================
 
 // Laptop ≤ 1200px
 @media (max-width: 1200px) {
@@ -121,20 +132,27 @@
 // Tablet / Mobile ≤ 768px
 @media (max-width: 768px) {
   .gallery-filter-dropdown {
-    margin: 10px auto;
-    display: block;
+    margin: 10px;
     text-align: center;
   }
 
   .gallery-filter-btn {
     width: 100%;
-    max-width: 18rem;
+    max-width: 18rem; 
     height: auto;
     padding: 1rem;
     font-size: 1.5rem;
   }
 
+  .gallery-filter-menu {
+    width: 100%; 
+  }
+
+    .gallery-filter-menu button {
+      color: #000;
+    }
+
   .gallery-img {
-    grid-template-columns: 1fr; // single column stack
+    grid-template-columns: 1fr; 
   }
 }
