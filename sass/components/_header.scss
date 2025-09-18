@@ -85,7 +85,6 @@ header {
   transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-/* Default placement using translateY */
 .hamburger span:nth-child(1) {
   transform: translateY(0);
   transition-delay: 0s;
@@ -101,7 +100,6 @@ header {
   transition-delay: 0.1s;
 }
 
-/* Active state (perfect X) */
 .hamburger.active span:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
   transition-delay: 0.1s;
@@ -130,7 +128,7 @@ header {
     flex-direction: column;
     background: rgba(0,0,0,.54);
     position: absolute;
-    top: 50px;
+    top: 53px;
     right: 0;
     width: 100vw;
     align-items: center;
