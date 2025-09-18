@@ -30,6 +30,36 @@
     "alt": "wallstone - late-day"
   },
   {
+    "slug": "wallstone46",
+    "set": "wallstone",
+    "src": "images/wallstone/wallstone46.jpg",
+    "alt": "wallstone - wallstone46"
+  },
+  {
+    "slug": "wallstone47",
+    "set": "wallstone",
+    "src": "images/wallstone/wallstone47.jpg",
+    "alt": "wallstone - wallstone47"
+  },
+  {
+    "slug": "wallstone48-flag",
+    "set": "wallstone",
+    "src": "images/wallstone/wallstone48-flag.jpg",
+    "alt": "wallstone - wallstone48/flagstone"
+  },
+  {
+    "slug": "wallstone49-steps",
+    "set": "wallstone",
+    "src": "images/wallstone/wallstone49-steps.jpg",
+    "alt": "wallstone - wallstone49/steps"
+  },
+  {
+    "slug": "wallstone50",
+    "set": "wallstone",
+    "src": "images/wallstone/wallstone50.jpg",
+    "alt": "wallstone - wallstone50"
+  },
+  {
     "slug": "modern",
     "set": "wallstone",
     "src": "images/wallstone/modern.PNG",
@@ -755,5 +785,17 @@
     "set": "flagstone",
     "src": "images/flagstones/flagstone3.jpg",
     "alt": "flagstone - flagstone3"
+  },
+  {
+    "slug": "flagstone7",
+    "set": "flagstone",
+    "src": "images/flagstones/flagstone7.jpg",
+    "alt": "flagstone - flagstone7"    
+  },
+  {
+    "slug": "flagstone8",
+    "set": "flagstone",
+    "src": "images/flagstones/flagstone8.jpg",
+    "alt": "flagstone - flagstone8"    
   }
 ]
